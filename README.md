@@ -18,7 +18,7 @@ Hyped up? If yes, navigate straight to the [Install section](#installation). Que
 # Gentoo dependency install.
 emerge --ask x11-libs/libX11 x11-libs/libXft media-libs/fontconfig \
   media-libs/freetype media-libs/harfbuzz x11-libs/libXrender
-emerge --ask media-fonts/iosevka # Optional, the default font.
+emerge --ask media-fonts/jetbrains-mono # Optional, the default font.
 
 # Install the terminal.
 git clone https://github.com/real-fht/st
