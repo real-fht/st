@@ -16,7 +16,8 @@ Hyped up? If yes, navigate straight to the [Install section](#installation). Que
 # NOTE: All of these commands need to be ran with root permissions.
 
 # Gentoo dependency install.
-emerge --ask x11-libs/libX11 x11-libs/libXft media-libsfontconfig media-libs/freetype media-libs/harfbuzz
+emerge --ask x11-libs/libX11 x11-libs/libXft media-libs/fontconfig \
+  media-libs/freetype media-libs/harfbuzz x11-libs/libXrender
 emerge --ask media-fonts/iosevka # Optional, the default font.
 
 # Install the terminal.
