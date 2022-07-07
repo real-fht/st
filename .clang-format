@@ -1,0 +1,9 @@
+
+AllowShortEnumsOnASingleLine:  true
+AllowShortBlocksOnASingleLine: true
+ColumnLimit:                   100
+IndentWidth:                   4
+IndentWrappedFunctionNames:    true
+IndentCaseBlocks:              true
+IndentCaseLabels:              false
+SpaceInEmptyBlock:             true
