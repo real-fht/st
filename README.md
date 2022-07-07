@@ -1,4 +1,4 @@
-<h2 align=center>real-99's Suckless Terminal (st) fork.</h2>
+<h1 align=center>real-99's Suckless Terminal (st) fork.</h1>
 <p align=center>Simple, suckless.</p>
 
 `> Why this tho?`, thats the question I've asked myself for a long time, why would I create a fork of ST? Well, here's it is, since most of the available terminals like [Alacritty](https://github.com/alacritty/alacritty) or [Kitty](https://github.com/kovidgoyal/kitty) are either don't cover all the features I want, or are ***overloaded*** with features (with most of I won't use.)
@@ -7,7 +7,7 @@ This fork of ST covers all the featureset I need, while also obeying to the *som
 
 Hyped up? If yes, navigate straight to the [Install section](#installation). Question about [Applied Patches?](#applied-patches) [Features?](#features), [Keybinds?](#keybinds) I've got you covered with a section for each of those!
 
-### Installation.
+## Installation
 
 > **NOTE**: I don't have any other distros (nor VMs) to test which commands to run to install the required librairies. Please provide them with a pull request.
 
@@ -27,7 +27,12 @@ cd st && make install && make clean
 st
 ```
 
-### Applied Patches.
+## Gallery
+
+<img title="Screenshot 1" alt="Screenshot 1" src="/img/st1.png">
+<img title="Screenshot 2" alt="Screenshot 2" src="/img/st2.png">
+
+## Applied Patches
 
 All of these are **hand-patched**, no automation involved using `patch -p1 < ./path/to/diff`, enjoy them well!
 
