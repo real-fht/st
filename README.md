@@ -50,6 +50,7 @@ All of these are **hand-patched**, no automation involved using `patch -p1 < ./p
 - [New term](https://st.suckless.org/patches/newterm/): Open a new ST window in the same current working directory.
 - [Patch column](https://github.com/nimaipatel/st/blob/master/patches/7672445bab01cb4e861651dc540566ac22e25812.diff): Avoid text cutting while resizing.
 - [Scrollback](https://st.suckless.org/patches/scrollback/): Scrollback support for ST + [Scrollback Mouse](https://st.suckless.org/patches/scrollback/st-scrollback-mouse-20220127-2c5edf2.diff) to scrollback with Shift+Mousewheel.
+- [Vertcenter](https://st.suckless.org/patches/vertcenter/): Center lines if `chscale > 1`
 - [Undercurl](https://st.suckless.org/patches/undercurl/): Undercurl support for ST. (Supports different styles!)
 
 ### Acknowledgements.

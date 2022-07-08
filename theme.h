@@ -3,16 +3,16 @@
  * Current theme: onedarker */
 
 /* Basic colors of the terminal, background and foreground. */
-#define BACKGROUND_COLOR "#1E222A"
-#define FOREGROUND_COLOR "#ABB2BF"
+#define BACKGROUND_COLOR "#1e2122"
+#define FOREGROUND_COLOR "#c0b196"
 
 /* Cursor color, REV_CURSOR_COLOR is used for selection. */
-#define CURSOR_COLOR     "#528BFF"
-#define REV_CURSOR_COLOR "#282C34"
+#define CURSOR_COLOR     "#323536"
+#define REV_CURSOR_COLOR "#323536"
 
 /* The following defines the standard 8 colors for a terminal. */
 /* Order:        black      red        green      yellow     blue       magenta    cyan       white    */
-#define COLORS "#5C6370", "#E06C75", "#98C379", "#E5C07B", "#61AFEF", "#C678DD", "#56B6C2", "#828997"
+#define COLORS "#242728", "#ec6b64", "#89b482", "#d6b676", "#6d8dad", "#9385b4", "#82b3a8", "#575a5b"
 
 /* The following defines the standard 8 bright colors for a terminal. */
 #define BRIGHT_COLORS COLORS /* Use the same colors as standard colors. */

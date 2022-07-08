@@ -110,6 +110,7 @@ typedef struct {
     int cw;     /* char width  */
     int mode;   /* window state/mode flags */
     int cursor; /* cursor style */
+    int cyo; /* char y offset */
 } TermWindow;
 
 typedef struct {
@@ -975,6 +976,7 @@ void xloadfonts(const char *fontstr, double fontsize) {
     /* Setting character width and height. */
     win.cw = ceilf(dc.font.width * cwscale);
     win.ch = ceilf(dc.font.height * chscale);
+    win.cyo = ceilf(dc.font.height * (chscale - 1) / 2);
 
     FcPatternDel(pattern, FC_SLANT);
     FcPatternAddInteger(pattern, FC_SLANT, FC_SLANT_ITALIC);
@@ -1307,7 +1309,7 @@ int xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len, i
                 font = &dc.bfont;
                 frcflags = FRC_BOLD;
             }
-            yp = winy + font->ascent;
+			yp = winy + font->ascent + win.cyo;
         }
 
         /* Lookup character index with default font. */
@@ -1602,7 +1604,7 @@ void xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int
             // Underline Style
             if (base.ustyle != 3) {
                 // XftDrawRect(xw.draw, fg, winx, winy + dc.font.ascent + 1, width, 1);
-                XFillRectangle(xw.dpy, XftDrawDrawable(xw.draw), ugc, winx, winy + dc.font.ascent + 1,
+                XFillRectangle(xw.dpy, XftDrawDrawable(xw.draw), ugc, winx, winy + win.cyo + dc.font.ascent + 1,
                                width, wlw);
             } else if (base.ustyle == 3) {
                 int ww = win.cw;                        // width;
@@ -1892,7 +1894,7 @@ void xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int
 
 
         if (base.mode & ATTR_STRUCK) {
-            XftDrawRect(xw.draw, fg, winx, winy + 2 * dc.font.ascent * chscale / 3, width, 1);
+            XftDrawRect(xw.draw, fg, winx, winy + win.cyo + 2 * dc.font.ascent * chscale / 3, width, 1);
         }
     }
 
