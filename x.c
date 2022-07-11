@@ -1094,8 +1094,9 @@ void xunloadfont(Font *f) {
 }
 
 void xunloadfonts(void) {
-    /* Clear Harfbuzz font cache. */
-    hbunloadfonts();
+    if (enable_ligatures == 1)
+        /* Clear Harfbuzz font cache. */
+        hbunloadfonts();
 
     /* Free the loaded fonts in the font cache.  */
     while (frclen > 0)
@@ -1396,8 +1397,9 @@ int xmakeglyphfontspecs(XftGlyphFontSpec *specs, const Glyph *glyphs, int len, i
         numspecs++;
     }
 
-    /* Harfbuzz transformation for ligatures. */
-    hbtransform(specs, glyphs, len, x, y);
+    if (enable_ligatures == 1)
+        /* Harfbuzz transformation for ligatures. */
+        hbtransform(specs, glyphs, len, x, y);
 
     return numspecs;
 }

@@ -2,14 +2,14 @@
 // vim: nofoldenable
 
 /* Main font to use. (see font2 for fallback fonts) */
-static char *font = "JetBrains Mono:size=12:antialias=true:autohint=true";
+static char *font = "Spacemono:size=12:antialias=true:autohint=true";
 
 /* Fallback fonts, in case the main one doesn't cover all the needed characters.
  * WARN: If you don't set fallback fonts for Japanese/Chinese/Arabic/CJK/... fonts and try to render
  * one, st will crash since there's no font that could have the said character. */
 static char *font2[] = {
-    // "codicon:size=14:antialias:true:autohint:true",
-    "JetBrains Mono Nerd Font:size=14:antialias=true:autohint=true"
+    // "codicon:size=12:antialias:true:autohint:true",
+    "Spacemono Nerd Font:size=12:antialias=true:autohint=true"
 };
 
 /* Character kerning, (basically the allowed space for a character)
@@ -54,6 +54,9 @@ char *termname = "st-256color";
 /* Number of spaces used per-tab */
 unsigned int tabspaces = 2;
 
+/* Enable/Disable ligature support */
+static int enable_ligatures = 0;
+
 /*
  * 1: render most of the lines/blocks characters without using the font for
  *    perfect alignment between cells (U2500 - U259F except dashes/diagonals).
@@ -93,7 +96,7 @@ static const char *colorname[] = {
 };
 
 /* bg opacity */
-float alpha = 0.95;
+float alpha = 1;
 
 
 /* Default colors (colorname index)
