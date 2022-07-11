@@ -3,7 +3,7 @@
  * Current theme: onedarker */
 
 /* Basic colors of the terminal, background and foreground. */
-#define BACKGROUND_COLOR "#1e2122"
+#define BACKGROUND_COLOR "#1e2121"
 #define FOREGROUND_COLOR "#c0b196"
 
 /* Cursor color, REV_CURSOR_COLOR is used for selection. */
