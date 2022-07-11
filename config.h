@@ -2,14 +2,14 @@
 // vim: nofoldenable
 
 /* Main font to use. (see font2 for fallback fonts) */
-static char *font = "Spacemono:size=12:antialias=true:autohint=true";
+static char *font = "monospace:size=12:antialias=true:autohint=true";
 
 /* Fallback fonts, in case the main one doesn't cover all the needed characters.
  * WARN: If you don't set fallback fonts for Japanese/Chinese/Arabic/CJK/... fonts and try to render
  * one, st will crash since there's no font that could have the said character. */
 static char *font2[] = {
     // "codicon:size=12:antialias:true:autohint:true",
-    "Spacemono Nerd Font:size=12:antialias=true:autohint=true"
+    "monospace:size=12:antialias=true:autohint=true"
 };
 
 /* Character kerning, (basically the allowed space for a character)
